@@ -53,14 +53,14 @@ function TaskForm() {
                 }}
             >
                 {({ handleChange, handleSubmit, values, isSubmitting }) => (
-                    <Form onSubmit={handleSubmit} className='bg-slate-300 max-w-sm rounded-md p-4 mx-auto mt-10'>
+                    <Form onSubmit={handleSubmit} className='bg-slate-300 max-w-sm rounded-xl p-4 mx-auto mt-10'>
                         <h1 className='text-xl font-bold uppercase text-center'>{params.id ? "Edit Task" : "New Task"}</h1>
-
+                        <img src='https://cdn-icons-png.flaticon.com/512/906/906334.png' alt="Task" className="rounded-full w-20 h-20 mx-auto text-center mt-3" />
                         <label className='block text-xs mt-3 font-bold'>Title</label>
                         <input type="text" name="title" onChange={handleChange} placeholder='Write a title' value={values.title} className='px-2 py-1 rounded-sm w-full' />
                         <label className='block text-xs mt-3 font-bold' >Description</label>
-                        <textarea name="description" rows="3" onChange={handleChange} placeholder='Write a description' value={values.description} className='px-2 py-1 rounded-sm w-full' />
-                        <button type='submit' disabled={isSubmitting} className='block bg-indigo-500 px-2 py-1 text-white w-full rounded-md'>
+                        <textarea name="description" rows="7" onChange={handleChange} placeholder='Write a description' value={values.description} className='px-2 py-1 rounded-sm w-full' />
+                        <button type='submit' disabled={isSubmitting} className='block bg-teal-700 px-2 py-1 text-white w-full rounded-md'>
                             {params.id ? "Edit" : isSubmitting ? "Saving..." : "Save"}
                         </button>
 
